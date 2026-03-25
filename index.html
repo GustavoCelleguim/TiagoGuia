@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiago | Guia de Turismo — Natureza & Aventura</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#" class="logo">
+        <svg
+          class="logo-leaf"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          style="color: var(--leaf)"
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+          <path d="M2 2s7.5 2 10.5 7" />
+        </svg>
+        TIAG<span>O</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+        <li><a href="#servicos" onclick="closeMenu()">Serviços</a></li>
+        <li><a href="#depoimentos" onclick="closeMenu()">Depoimentos</a></li>
+        <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+      </ul>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        onclick="toggleMenu()"
+        aria-label="Abrir menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-leaves">
+        <svg
+          class="floating-leaf"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          fill="white"
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+        </svg>
+        <svg
+          class="floating-leaf"
+          width="45"
+          height="45"
+          viewBox="0 0 24 24"
+          fill="white"
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+        </svg>
+        <svg
+          class="floating-leaf"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="white"
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+        </svg>
+      </div>
+
+      <div class="hero-right">
+        <div
+          class="hero-image"
+          style="
+            background-image: url(Image/Luiz.jpg);
+            background-size: cover;
+            background-position: center top;
+          "
+        ></div>
+        <div class="hero-image-overlay"></div>
+        <div class="hero-image-bottom"></div>
+      </div>
+
+      <div class="hero-left">
+        <div class="hero-tag">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 22s8-6 8-12a8 8 0 10-16 0c0 6 8 12 8 12z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Guia de Turismo Credenciado
+        </div>
+        <h1>Tiagoo<em>Unindo natureza, segurança e bem-estar</em></h1>
+        <p class="hero-quote">
+          "Guiar é mais do que conduzir — é cuidar, ensinar e inspirar."
+        </p>
+        <div class="hero-actions">
+          <a
+            href="https://wa.me/5511995676333"
+            class="btn-primary"
+            target="_blank"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+              />
+            </svg>
+            Agende seu tour
+          </a>
+          <a href="#servicos" class="btn-secondary">Conheça os serviços →</a>
+        </div>
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div class="hero-stat">
+          <div class="hero-stat-num">8+</div>
+          <div class="hero-stat-label">Anos de Experiência</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Clientes Atendidos</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-label">Roteiros Exclusivos</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4.9</div>
+          <div class="hero-stat-label">Avaliação Média</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOUNTAIN DIVIDER -->
+    <svg
+      class="mountain-divider"
+      viewBox="0 0 1440 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 120L60 108C120 96 240 72 360 66C480 60 600 72 720 78C840 84 960 84 1080 78C1200 72 1320 60 1380 54L1440 48V0H0V120Z"
+        fill="#1B3A1A"
+      />
+      <path
+        d="M0 80L80 72C160 64 320 48 480 44C640 40 800 48 960 52C1120 56 1280 56 1360 56L1440 56V0H0V80Z"
+        fill="#2A5429"
+        opacity="0.3"
+      />
+    </svg>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-photo reveal">
+            <img
+              src="/Image/FotoTiagoLuizWohnrath.png"
+              alt="Tiagoo — Guia de Turismo"
+              class="about-photo-img"
+            />
+            <div class="about-photo-accent"></div>
+            <div class="about-photo-accent-bottom"></div>
+          </div>
+          <div class="about-content reveal">
+            <div class="section-eyebrow">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                style="color: var(--moss)"
+              >
+                <path
+                  d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+                />
+                <path d="M2 2s7.5 2 10.5 7" />
+              </svg>
+              Sobre
+            </div>
+            <h2 class="section-heading">
+              Experiência, dedicação e paixão pela natureza
+            </h2>
+            <p>
+              Com mais de 3 anos atuando como guia profissional de turismo,
+              construí minha carreira sobre três pilares: segurança,
+              conhecimento e respeito pela natureza.
+            </p>
+            <p>
+              Cada tour é planejado com atenção aos detalhes, desde a escolha do
+              melhor horário para cada trilha até as paradas estratégicas que
+              revelam paisagens que poucos conhecem. Trabalho com grupos
+              reduzidos para garantir um atendimento personalizado e de alta
+              qualidade.
+            </p>
+            <div class="about-values">
+              <div class="about-value">
+                <div class="about-value-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 22s8-6 8-12a8 8 0 10-16 0c0 6 8 12 8 12z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Segurança</h4>
+                  <p>Equipamento adequado e rotas planejadas</p>
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+                    />
+                    <path d="M2 2s7.5 2 10.5 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Natureza</h4>
+                  <p>Respeito ao meio ambiente em cada trilha</p>
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Dedicação</h4>
+                  <p>Cada tour é uma experiência única</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURE STATS STRIP -->
+    <div class="nature-strip">
+      <div class="nature-strip-item">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+        >
+          <path d="M8 18l4-10 4 10" />
+          <path d="M4 22l5.5-14L12 2l2.5 6L20 22" />
+          <line x1="2" y1="22" x2="22" y2="22" />
+        </svg>
+        <div class="nature-strip-num">50+</div>
+        <div class="nature-strip-label">Trilhas Mapeadas</div>
+      </div>
+      <div class="nature-strip-item">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+          <path d="M2 2s7.5 2 10.5 7" />
+        </svg>
+        <div class="nature-strip-num">30+</div>
+        <div class="nature-strip-label">Reservas Ecológicas</div>
+      </div>
+      <div class="nature-strip-item">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path
+            d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+          />
+          <line x1="2" y1="12" x2="22" y2="12" />
+        </svg>
+        <div class="nature-strip-num">15+</div>
+        <div class="nature-strip-label">Regiões Exploradas</div>
+      </div>
+      <div class="nature-strip-item">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+        >
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <div class="nature-strip-num">500+</div>
+        <div class="nature-strip-label">Clientes Guiados</div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="services-header reveal">
+          <div>
+            <div class="section-eyebrow">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                style="color: var(--moss)"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              Serviços
+            </div>
+            <h2 class="section-heading">Experiências na natureza</h2>
+          </div>
+          <p class="section-sub">
+            Cada serviço é pensado para conectar você à natureza com segurança e
+            excelência profissional.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M8 18l4-10 4 10" />
+                <path d="M4 22l5.5-14L12 2l2.5 6L20 22" />
+                <line x1="2" y1="22" x2="22" y2="22" />
+              </svg>
+            </div>
+            <div class="service-card-content">
+              <h3>Trilhas & Ecoturismo</h3>
+              <p>
+                Roteiros em trilhas ecológicas com diferentes níveis de
+                dificuldade. Cachoeiras, mirantes e imersão total na natureza.
+              </p>
+            </div>
+            <svg
+              class="service-card-leaf"
+              width="100"
+              height="100"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="color: var(--forest)"
+            >
+              <path
+                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+              />
+            </svg>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+                />
+              </svg>
+            </div>
+            <div class="service-card-content">
+              <h3>Tours Histórico-Culturais</h3>
+              <p>
+                Conheça a história e a cultura da região através de roteiros
+                guiados por centros históricos e pontos de relevância.
+              </p>
+            </div>
+            <svg
+              class="service-card-leaf"
+              width="100"
+              height="100"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="color: var(--forest)"
+            >
+              <path
+                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+              />
+            </svg>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+                />
+              </svg>
+            </div>
+            <div class="service-card-content">
+              <h3>Roteiros Personalizados</h3>
+              <p>
+                Planejamento sob medida para casais, famílias ou grupos
+                corporativos. Cada detalhe ajustado às suas preferências.
+              </p>
+            </div>
+            <svg
+              class="service-card-leaf"
+              width="100"
+              height="100"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="color: var(--forest)"
+            >
+              <path
+                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+              />
+            </svg>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="1" y="3" width="15" height="13" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <div class="service-card-content">
+              <h3>Transfers & Logística</h3>
+              <p>
+                Transporte seguro e pontual entre aeroporto, hotel e pontos
+                turísticos. Logística completa para sua viagem.
+              </p>
+            </div>
+            <svg
+              class="service-card-leaf"
+              width="100"
+              height="100"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="color: var(--forest)"
+            >
+              <path
+                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+              />
+            </svg>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"
+                />
+                <path
+                  d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+                />
+                <path
+                  d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"
+                />
+                <path
+                  d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"
+                />
+                <path
+                  d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"
+                />
+                <path
+                  d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"
+                />
+                <path
+                  d="M10 9.5C10 10.33 9.33 11 8.5 11h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z"
+                />
+                <path
+                  d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"
+                />
+              </svg>
+            </div>
+            <div class="service-card-content">
+              <h3>Turismo de Aventura</h3>
+              <p>
+                Escalada e Canoagem com equipamentos certificados e orientação
+                técnica.
+              </p>
+            </div>
+            <svg
+              class="service-card-leaf"
+              width="100"
+              height="100"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="color: var(--forest)"
+            >
+              <path
+                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+              />
+            </svg>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"
+                />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+            </div>
+            <div class="service-card-content">
+              <h3>Photo Tours</h3>
+              <p>
+                Os melhores ângulos e horários para fotos perfeitas. Cenários
+                espetaculares registrados nas suas melhores lembranças.
+              </p>
+            </div>
+            <svg
+              class="service-card-leaf"
+              width="100"
+              height="100"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="color: var(--forest)"
+            >
+              <path
+                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+      <div class="tree-rings">
+        <div class="tree-ring"></div>
+        <div class="tree-ring"></div>
+        <div class="tree-ring"></div>
+        <div class="tree-ring"></div>
+      </div>
+      <div class="philosophy-content reveal">
+        <svg
+          class="philosophy-icon"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1"
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+          <path d="M2 2s7.5 2 10.5 7" />
+        </svg>
+        <p class="philosophy-text">
+          "Guiar é mais do que conduzir — é cuidar, ensinar e inspirar. Cada
+          trilha percorrida é uma oportunidade de transformar a relação das
+          pessoas com a natureza."
+        </p>
+        <p class="philosophy-author">Tiagoo — Guia de Turismo</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <div style="margin-bottom: 4rem" class="reveal">
+          <div class="section-eyebrow">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="color: var(--moss)"
+            >
+              <path
+                d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+              />
+            </svg>
+            Depoimentos
+          </div>
+          <h2 class="section-heading">
+            A confiança de quem já viveu essa experiência
+          </h2>
+        </div>
+        <div class="testimonials-layout reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+            <blockquote>
+              "Profissionalismo impecável. O Tiago conhece cada detalhe da
+              região e nos levou a lugares que jamais encontraríamos sozinhos.
+              Experiência que recomendo sem hesitar."
+            </blockquote>
+            <cite>Mariana & Rafael</cite>
+            <div class="t-detail">Viagem em casal — Janeiro 2025</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+            <blockquote>
+              "Contratamos o Tiago para um grupo de 12 pessoas e foi perfeito.
+              Organização, segurança e um conhecimento que tornou cada parada
+              especial. Nota máxima."
+            </blockquote>
+            <cite>Carlos Henrique</cite>
+            <div class="t-detail">Grupo corporativo — Março 2025</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+            <blockquote>
+              "Viajamos com crianças e o Tiago soube conduzir tudo com muita
+              paciência e cuidado. Meus filhos amaram a trilha e ainda falam
+              sobre a cachoeira até hoje."
+            </blockquote>
+            <cite>Família Santos</cite>
+            <div class="t-detail">Passeio em família — Fevereiro 2025</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOUNTAIN DIVIDER 2 -->
+    <svg
+      class="mountain-divider"
+      viewBox="0 0 1440 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      style="margin-bottom: -2px"
+    >
+      <path
+        d="M0 0L120 12C240 24 480 48 720 52C960 56 1200 40 1320 32L1440 24V80H0V0Z"
+        fill="#1B3A1A"
+        opacity="0.15"
+      />
+      <path
+        d="M0 30L120 38C240 46 480 62 720 64C960 66 1200 54 1320 48L1440 42V80H0V30Z"
+        fill="#FFFFFF"
+      />
+    </svg>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="reveal">
+            <div class="section-eyebrow">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                style="color: var(--moss)"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Contato
+            </div>
+            <h2 class="section-heading">
+              Vamos planejar sua próxima aventura na natureza
+            </h2>
+            <div style="margin-top: 3rem">
+              <div class="contact-item">
+                <div class="contact-item-label">WhatsApp</div>
+                <div class="contact-item-value">
+                  <a href="https://wa.me/5511995676333">+55 (11) 99567-6333</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-label">E-mail</div>
+                <div class="contact-item-value">
+                  <a href="mailto:tiagoluizwohnrath@gmail.com"
+                    >tiagoluizwohnrath</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-label">Instagram</div>
+                <div class="contact-item-value">
+                  <a href="#">@guiatiagowohnrath</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-label">Localização</div>
+                <div class="contact-item-value">Brasil</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="contact-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  id="wa-nome"
+                  placeholder="Nome completo"
+                  autocomplete="name"
+                />
+                <input
+                  type="tel"
+                  id="wa-telefone"
+                  placeholder="WhatsApp com DDD"
+                  autocomplete="tel"
+                />
+              </div>
+              <input
+                type="email"
+                id="wa-email"
+                placeholder="E-mail"
+                autocomplete="email"
+              />
+              <input
+                type="text"
+                id="wa-passeio"
+                placeholder="Tipo de passeio desejado"
+              />
+              <input
+                type="text"
+                id="wa-pessoas"
+                placeholder="Número de pessoas"
+              />
+              <textarea
+                id="wa-descricao"
+                placeholder="Descreva o que você procura para sua viagem..."
+              ></textarea>
+              <button
+                class="btn-form"
+                id="btn-enviar"
+                type="button"
+                onclick="sendContactForm()"
+              >
+                Enviar Mensagem
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-brand">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          style="
+            color: var(--leaf);
+            vertical-align: middle;
+            margin-right: 6px;
+            opacity: 0.6;
+          "
+        >
+          <path
+            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 8.68-3.56 9-11z"
+          />
+        </svg>
+        TIAG<span>OO</span>
+      </div>
+      <div class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-copy">
+        © 2025 Tiagoo — Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a
+      href="https://wa.me/5511995676333?text=Olá%20Tiago!%20Gostaria%20de%20agendar%20um%20tour."
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <!-- Ícone SVG oficial WhatsApp -->
+      <svg
+        class="wa-float-icon"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.18" />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16 5C9.925 5 5 9.925 5 16c0 2.068.558 3.999 1.527 5.657L5 27l5.527-1.504A10.943 10.943 0 0016 27c6.075 0 11-4.925 11-11S22.075 5 16 5zm-3.13 6.25c-.232-.522-.477-.533-.697-.542-.18-.008-.387-.007-.594-.007s-.541.078-.824.39c-.284.31-1.083 1.058-1.083 2.58s1.108 2.994 1.263 3.201c.155.207 2.144 3.41 5.283 4.642 2.612 1.029 3.143.825 3.71.773.567-.052 1.83-.748 2.088-1.47.258-.724.258-1.344.18-1.472-.077-.129-.284-.207-.593-.362s-1.83-.904-2.114-1.006c-.283-.103-.49-.155-.696.155-.206.31-.8.9-.98 1.107-.181.207-.362.233-.672.078-.31-.155-1.307-.482-2.49-1.536-.92-.82-1.542-1.831-1.722-2.14-.18-.31-.019-.477.136-.631.14-.138.31-.362.465-.543.155-.181.207-.31.31-.517.104-.207.052-.388-.025-.543-.078-.155-.68-1.681-.95-2.297z"
+          fill="white"
+        />
+      </svg>
+
+      <span class="wa-float-text">
+        <span class="wa-float-label">Fale comigo agora</span>
+        WhatsApp
+      </span>
+    </a>
+
+    <script>
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      function toggleMenu() {
+        const links = document.getElementById("navLinks");
+        links.classList.toggle("open");
+        document.body.style.overflow = links.classList.contains("open")
+          ? "hidden"
+          : "";
+      }
+      function closeMenu() {
+        document.getElementById("navLinks").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      function sendContactForm() {
+        const nome = document.getElementById("wa-nome").value;
+        const telefone = document.getElementById("wa-telefone").value;
+        const email = document.getElementById("wa-email").value;
+        const passeio = document.getElementById("wa-passeio").value;
+        const pessoas = document.getElementById("wa-pessoas").value;
+        const descricao = document.getElementById("wa-descricao").value;
+        const btn = document.getElementById("btn-enviar");
+
+        if (!nome || !telefone || !descricao) {
+          alert(
+            "Por favor, preencha os campos obrigatórios (Nome, WhatsApp e Descrição).",
+          );
+          return;
+        }
+
+        const emailDestino = "seu_email_aqui@gmail.com";
+        btn.innerText = "Enviando...";
+        btn.disabled = true;
+
+        fetch(`https://formsubmit.co/ajax/${emailDestino}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            Nome: nome,
+            WhatsApp: telefone,
+            Email: email,
+            Passeio: passeio,
+            Pessoas: pessoas,
+            Descricao: descricao,
+          }),
+        })
+          .then((r) => r.json())
+          .then(() => {
+            alert(
+              "Mensagem enviada com sucesso! O Tiago entrará em contato em breve.",
+            );
+            btn.innerText = "Enviar Mensagem";
+            btn.disabled = false;
+          })
+          .catch(() => {
+            alert(
+              "Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.",
+            );
+            btn.innerText = "Enviar Mensagem";
+            btn.disabled = false;
+          });
+      }
+    </script>
+  </body>
+</html>
